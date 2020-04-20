@@ -1,11 +1,81 @@
 import React from "react";
 import profilePic from "../img/IMG_3528.PNG";
 import Carousel from "./Carousel";
+import Modal from "react-modal";
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    backgroundColor: "rgb(58, 58, 58)",
+    borderRadius: "8px",
+  },
+  overlay: {
+    backgroundColor: "rgba(255, 255, 255, 0.37)",
+  },
+};
 
 export default function Usercard() {
+  //modal example
+  var subtitle;
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    subtitle.style.color = "white";
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  //////
   return (
     <div className="user-card-body">
       <div className="front">
+        <div>
+          <Modal
+            isOpen={modalIsOpen}
+            onAfterOpen={afterOpenModal}
+            onRequestClose={closeModal}
+            style={customStyles}
+            contentLabel="Modal"
+          >
+            <div className="modal-header">
+              <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Contact Me</h2>
+              <button onClick={closeModal}>
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+
+            <div className="contact-inputs">
+              <form action="https://formspree.io/mnqpoygn" method="POST">
+                <label htmlFor="name">Name</label>
+                <input type="text" name="name" placeholder="Name" />
+                <label htmlFor="replyTo">Email</label>
+
+                <input type="text" name="_replyto" placeholder="Email" />
+                <label htmlFor="subject">Subject</label>
+
+                <input type="text" name="subject" placeholder="Subject" />
+                <label htmlFor="message">Info</label>
+
+                <textarea
+                  className="text-area"
+                  name="message"
+                  placeholder="Message"
+                  rows="6"
+                ></textarea>
+                <input className="send-btn" type="submit" value="Send" />
+              </form>
+            </div>
+          </Modal>
+        </div>
         <div className="avatar-con">
           <img className="avatar" src={profilePic} alt="avatar" />
           <div className="card-content">
@@ -32,9 +102,11 @@ export default function Usercard() {
         </div>
         <div className="svg-footer">
           <a
-            href="https://kkslider2130.github.io/#contact"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="something"
+            onClick={(e) => {
+              e.preventDefault();
+              openModal();
+            }}
           >
             <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
               <path d="m0 241 121 120v-180zm0 0" fill="#5a5a5a" />

@@ -100,8 +100,6 @@ $transition: all 0.2s ease;
     flex-direction: column;
     align-items: center;
     font-family: "Montserrat";
-
-    width: 50%;
     max-height: 100%;
     border-radius: 8px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
@@ -232,6 +230,9 @@ $transition: all 0.2s ease;
       a {
         width: 50px;
         margin: 0 0.7rem;
+        &:hover {
+          opacity: 0.6;
+        }
       }
     }
   }
@@ -243,7 +244,7 @@ $transition: all 0.2s ease;
     p.carousel-status {
       position: fixed;
       top: 9%;
-      right: 46%;
+      right: 48%;
     }
     .slide {
       background-color: rgb(58, 58, 58);
@@ -257,6 +258,93 @@ $transition: all 0.2s ease;
     }
     .control-dots {
       position: relative;
+      padding-inline-start: 0px;
+    }
+    .carousel-slider .control-arrow {
+      position: fixed;
+      @media screen and (max-width: $smallScreen) {
+        position: absolute;
+      }
+    }
+  }
+}
+//modal
+.ReactModalPortal {
+  h2 {
+    margin: 0 0 2rem 0;
+  }
+
+  .ReactModal__Overlay.ReactModal__Overlay--after-open {
+    background-color: rgba(255, 255, 255, 0.37);
+  }
+  .ReactModal__Content {
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        background: none;
+        color: white;
+        border: none;
+        font-size: 1.4rem;
+        margin-bottom: 1.8rem;
+        cursor: pointer;
+      }
+    }
+    .contact-inputs {
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        label {
+          margin-bottom: 0.3rem;
+          align-self: flex-start;
+          margin-left: 1.5rem;
+          font-weight: 700;
+        }
+        .text-area {
+          width: 80%;
+          margin-bottom: 2rem;
+          border-radius: 2px;
+        }
+        .send-btn {
+          width: 35%;
+          height: 1.2rem;
+          font-size: 0.8rem;
+        }
+        input {
+          border-radius: 3px;
+          margin-bottom: 1rem;
+          margin-right: 5rem;
+          margin-left: 5rem;
+          width: 80%;
+          height: 2.5vh;
+        }
+      }
+    }
+    font-family: "Montserrat";
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: "-50%";
+    transition: "2s";
+    background-color: rgb(58, 58, 58);
+    color: white;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    animation-name: modalFade;
+    animation-duration: 0.6s;
+
+    @keyframes modalFade {
+      from {
+        transform: translate(-50%, -80%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(-10%, -10%);
+        opacity: 1;
+      }
     }
   }
 }
