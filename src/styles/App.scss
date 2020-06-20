@@ -14,9 +14,11 @@ $transition: all 0.2s ease;
   background-image: url("https://i.kym-cdn.com/photos/images/original/000/970/154/2ef.gif");
 }
 .App {
-  background-image: url("../img/day.gif");
+  background-image: url("../img/portfolio-gif-day.gif");
   background-color: #0a272f;
-  background-repeat: repeat-x;
+  object-fit: fill;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
