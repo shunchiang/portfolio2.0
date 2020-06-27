@@ -3,7 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 import ftc from "../img/ftc.png";
 import mtg from "../img/mtg.png";
 import gigapet from "../img/gigapet.png";
-import foodtruck from "../img/foodtruck.png";
+import foodtruck from "../img/foodtruck.mp4";
 import potd from "../img/nasa.png";
 import blog from "../img/blog.png";
 import portfo from "../img/portfo.png";
@@ -24,6 +24,23 @@ export default () => (
         Francisco with a mission of reuniting the homeless. A platform for
         joining and displaying local chapters and displaying reunions of
         homeless people and their loved ones.
+      </p>
+    </div>
+    <div>
+      <video autoPlay="autoplay" loop="loop" muted>
+        <source type="video/mp4" src={foodtruck} />
+      </video>
+      <p className="legend">
+        {" "}
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://confident-volhard-97d9a3.netlify.app/loginDiner"
+        >
+          FoodTruck TrackR
+        </a>
+        : Yelp like app for food tracking and reviewing foodtrucks with stripe
+        and payment integration for vendors and customers.
       </p>
     </div>
     <div>
@@ -68,21 +85,7 @@ export default () => (
         the same meal virtually to digital pets. Utilized SERN stack with redux
       </p>
     </div>
-    <div>
-      <img alt="" src={foodtruck} />
-      <p className="legend">
-        {" "}
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://confident-volhard-97d9a3.netlify.app/loginDiner"
-        >
-          FoodTruck TrackR
-        </a>
-        : Team built web app that allows consumers to track food trucks, and
-        truck vendors to list their businesses
-      </p>
-    </div>
+
     <div>
       <img alt="" src={potd} />
       <p className="legend">
