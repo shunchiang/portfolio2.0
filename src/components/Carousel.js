@@ -8,9 +8,24 @@ import potd from "../img/nasa.png";
 import blog from "../img/blog.png";
 import portfo from "../img/portfo.png";
 import rm from "../img/rm.png";
+import mm from "../img/mm.mp4";
 
 export default () => (
   <Carousel showThumbs={false} showStatus={true}>
+    <div>
+      <video autoPlay="autoplay" loop="loop" muted>
+        <source type="video/mp4" src={mm} />
+      </video>
+      <p className="legend">
+        <a rel="noopener noreferrer" target="_blank" href="miraclemap.net">
+          Miracle Map
+        </a>
+        : Map app built for the Miracle Messages organization based in San
+        Francisco with a mission of reuniting the homeless. A platform for
+        joining and displaying local chapters and displaying reunions of
+        homeless people and their loved ones.
+      </p>
+    </div>
     <div>
       <img alt="project example" src={ftc} />
       <p className="legend">
