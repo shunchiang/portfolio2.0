@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
-import ftc from "../img/ftc.png";
+import ftc from "../img/ftc.mp4";
 import mtg from "../img/mtg.png";
 import gigapet from "../img/gigapet.png";
 import foodtruck from "../img/foodtruck.mp4";
@@ -44,7 +44,9 @@ export default () => (
       </p>
     </div>
     <div>
-      <img alt="project example" src={ftc} />
+      <video autoPlay="autoplay" loop="loop" muted>
+        <source type="video/mp4" src={ftc} />
+      </video>{" "}
       <p className="legend">
         <a
           rel="noopener noreferrer"
