@@ -17,7 +17,11 @@ export default () => (
         <source type="video/mp4" src={mm} />
       </video>
       <p className="legend">
-        <a rel="noopener noreferrer" target="_blank" href="miraclemap.net">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://miracle-messages-fe-git-mm-view.kkslider2130.vercel.app/"
+        >
           Miracle Map
         </a>
         : Map app built for the Miracle Messages organization based in San
@@ -35,7 +39,7 @@ export default () => (
         <a
           rel="noopener noreferrer"
           target="_blank"
-          href="https://confident-volhard-97d9a3.netlify.app/loginDiner"
+          href="https://food-truck-track-r.vercel.app/login"
         >
           FoodTruck TrackR
         </a>
