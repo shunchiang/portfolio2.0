@@ -11,7 +11,7 @@ $transition: all 0.2s ease;
 //https://i.kym-cdn.com/photos/images/original/000/970/154/2ef.gif//
 .App.newBg {
   transition: 1.5s;
-  background-image: url("https://i.kym-cdn.com/photos/images/original/000/970/154/2ef.gif");
+  background-image: url("../img/night.gif");
 }
 .App {
   background-image: url("../img/portfolio-gif-day.gif");
@@ -74,14 +74,15 @@ $transition: all 0.2s ease;
       align-items: center;
       h1 {
         text-align: center;
-        font-weight: 300;
+        font-weight: 600;
+        margin: 1rem auto;
       }
       .back-btn-div {
         display: flex;
         flex-direction: column;
         align-items: center;
         .back-btn {
-          margin-top: 5px;
+          margin-top: 0.7rem;
           padding: 0.25rem 0.4rem;
           border: 1px solid white;
           border-radius: 5px;
@@ -278,6 +279,48 @@ $transition: all 0.2s ease;
       }
     }
   }
+}
+.infoCon {
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  background: black;
+  opacity: 0.9;
+  .titleBox {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    a {
+      background: white;
+      color: black;
+      text-decoration: none;
+      padding: 0.2rem 0.4rem;
+      font-weight: bold;
+      margin-right: 1rem;
+      &:hover {
+        background: rgba(201, 201, 201, 0.473);
+      }
+    }
+  }
+}
+.carousel__dot-group {
+  text-align: center;
+}
+.btnLeft,
+.btnRight {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.418);
+  width: 37px;
+  border-radius: 50%;
+  position: absolute;
+  font-size: 1.8rem;
+  top: 50%;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+.btnRight {
+  right: 1%;
 }
 //modal
 .ReactModalPortal {

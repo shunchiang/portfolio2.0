@@ -222,7 +222,7 @@ export default function Usercard() {
       </div>
       <div className="back">
         <div className="back-cont">
-          <h1>works</h1>
+          <h1>Fullstack Projects</h1>
           <Carousel />
           <div className="back-btn-div">
             <div
