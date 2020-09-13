@@ -24,7 +24,7 @@ import mm from "../img/mm.mp4";
 export default () => (
   <CarouselProvider
     naturalSlideWidth={100}
-    naturalSlideHeight={50}
+    naturalSlideHeight={46}
     totalSlides={10}
   >
     <Slider>

@@ -76,7 +76,7 @@ $transition: all 0.2s ease;
       background: #3a3a3a;
       h1 {
         text-align: center;
-        font-weight: 600;
+        font-weight: 400;
         margin: 1rem auto;
       }
       .back-btn-div {
@@ -496,6 +496,7 @@ video {
 
 .designs-container {
   display: flex;
+  max-height: 65vh;
   .thumbnail-container {
     display: flex;
     flex-direction: column;
@@ -509,6 +510,7 @@ video {
       padding: 3px 0px 3px 3px;
       margin: 5px 1px 3px 0px;
       border: 1px solid rgba(81, 203, 238, 1);
+      cursor: pointer;
     }
     .active {
       box-shadow: 0 0 5px #ed8e9e;
@@ -526,6 +528,7 @@ video {
     }
     img {
       width: 50%;
+      max-height: 100%;
     }
     .fade {
       animation: fadeIn 2s forwards;
@@ -548,6 +551,9 @@ video {
         padding: 0.5rem 0;
         border-radius: 20px;
         cursor: pointer;
+        &:hover {
+          background: #e2a1ac;
+        }
       }
     }
   }

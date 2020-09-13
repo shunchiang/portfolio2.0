@@ -40,7 +40,15 @@ export default function Designs() {
               flow, and mobile promotional views. The app was designed heavily
               with usability, convenience, and simplicity in mind.
             </p>
-            <div className="figma-btn">Figma</div>
+            <div className="figma-btn">
+              <a
+                href="https://www.figma.com/file/21x7l36ouAwxCCkqXUHoZk/Anywhere-Fitness?node-id=15%3A10867"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Figma
+              </a>
+            </div>
           </div>
         </div>
         <div className={currentThumb !== queueApp ? "viewBox" : `viewBox fade`}>
@@ -55,7 +63,15 @@ export default function Designs() {
               of our whitespace really allows us to drive home the design system
               principles.
             </p>
-            <div className="figma-btn">Figma</div>
+            <div className="figma-btn">
+              <a
+                href="https://www.figma.com/file/Eydo5RtUYCddBsApV6hEpM/The-Queue-App?node-id=0%3A1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Figma
+              </a>
+            </div>
           </div>
         </div>
         <div
@@ -74,7 +90,15 @@ export default function Designs() {
               boredom. The project spanned a week and went through 4 iteration
               cycles.
             </p>
-            <div className="figma-btn">Figma</div>
+            <div className="figma-btn">
+              <a
+                href="https://www.figma.com/file/VFBL5X6fvEV15JODy8Sfdw/Sleep-Tracker-App?node-id=330%3A0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Figma
+              </a>
+            </div>
           </div>
         </div>
         <div className={currentThumb !== rrandall ? "viewBox" : `viewBox fade`}>
@@ -88,7 +112,15 @@ export default function Designs() {
               to cater towards the client's domestic audience's sensibilities
               while also keeping his commercial audiences in mind.
             </p>
-            <div className="figma-btn">Figma</div>
+            <div className="figma-btn">
+              <a
+                href="https://www.figma.com/file/3DOLsQusbcWxuYu9iK3lXW/R.Randall?node-id=0%3A1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Figma
+              </a>
+            </div>
           </div>
         </div>
       </div>
