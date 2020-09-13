@@ -66,12 +66,14 @@ $transition: all 0.2s ease;
     opacity: 0;
     display: none;
     backface-visibility: visible;
-    background-color: rgb(58, 58, 58);
+    background-color: #3a3a3a;
     color: white;
     .back-cont {
       display: flex;
       flex-direction: column;
       align-items: center;
+      height: 100%;
+      background: #3a3a3a;
       h1 {
         text-align: center;
         font-weight: 600;
@@ -160,7 +162,10 @@ $transition: all 0.2s ease;
       .bg {
         animation: pulse 2s ease infinite;
       }
-
+      .portfolioBtnDiv {
+        display: flex;
+        justify-content: center;
+      }
       .btn,
       .bg {
         position: absolute;
@@ -280,6 +285,80 @@ $transition: all 0.2s ease;
     }
   }
 }
+//tabs
+.tabrow {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  line-height: 24px;
+  height: 26px;
+  overflow: hidden;
+  font-size: 12px;
+  font-family: verdana;
+  position: relative;
+}
+.tabrow li {
+  border: 1px solid #aaa;
+  background: #6b6b6b;
+
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin: 0 -5px;
+  padding: 0 20px;
+}
+.tabrow .tab {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tabrow li.selected {
+  background: #3a3a3a;
+  color: white;
+  z-index: 2;
+  border-bottom-color: #3a3a3a;
+}
+.tabrow:before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #aaa;
+  z-index: 1;
+}
+.tabrow li:before,
+.tabrow li:after {
+  border: 1px solid #aaa;
+  position: absolute;
+  bottom: -1px;
+  width: 5px;
+  height: 5px;
+  content: " ";
+}
+.tabrow li:before {
+  left: -6px;
+  border-bottom-right-radius: 6px;
+  border-width: 0 1px 1px 0;
+  box-shadow: 2px 2px 0 #6a6a6a;
+}
+.tabrow li:after {
+  right: -6px;
+  border-bottom-left-radius: 6px;
+  border-width: 0 0 1px 1px;
+  box-shadow: -2px 2px 0 #6b6b6b;
+}
+.tabrow li.selected:before {
+  box-shadow: 2px 2px 0 #3a3a3a;
+}
+.tabrow li.selected:after {
+  box-shadow: -2px 2px 0 #3a3a3a;
+}
+
+///
 .infoCon {
   width: 100%;
   position: absolute;
@@ -301,6 +380,9 @@ $transition: all 0.2s ease;
       }
     }
   }
+  p {
+    margin: 0.8rem 0.5rem;
+  }
 }
 .carousel__dot-group {
   text-align: center;
@@ -321,6 +403,9 @@ $transition: all 0.2s ease;
 }
 .btnRight {
   right: 1%;
+}
+.btnLeft {
+  left: 1%;
 }
 //modal
 .ReactModalPortal {
@@ -405,4 +490,73 @@ $transition: all 0.2s ease;
 
 video {
   width: 100%;
+}
+
+//designs section
+
+.designs-container {
+  display: flex;
+  .thumbnail-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    .thumbnail {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+      padding: 3px 0px 3px 3px;
+      margin: 5px 1px 3px 0px;
+      border: 1px solid rgba(81, 203, 238, 1);
+    }
+    .active {
+      box-shadow: 0 0 5px #ed8e9e;
+      padding: 3px 0px 3px 3px;
+      margin: 5px 1px 3px 0px;
+      border: 1px solid #ed8e9e;
+    }
+  }
+  .view-container {
+    display: flex;
+    width: 80%;
+    .viewBox {
+      display: none;
+      opacity: 0;
+    }
+    img {
+      width: 50%;
+    }
+    .fade {
+      animation: fadeIn 5s forwards;
+      display: flex;
+    }
+    .design-description {
+      display: flex;
+      flex-direction: column;
+      .title {
+        font-size: 1.2rem;
+      }
+      .content {
+        font-weight: 300;
+        font-size: 1rem;
+      }
+      .figma-btn {
+        background: #ed8e9e;
+        text-align: center;
+        width: 50%;
+        padding: 0.5rem 0;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

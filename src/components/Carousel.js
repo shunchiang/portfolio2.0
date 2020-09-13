@@ -139,7 +139,7 @@ export default () => (
                   target="_blank"
                   href="https://shun-chiang-game-of-life.vercel.app/"
                 >
-                  Magic the Gathering booster sim
+                  MTG booster sim
                 </a>
                 |Redux| |React Testing Library| |Adobe suite| |Javascript|
                 |HTML|{" "}
