@@ -1,5 +1,6 @@
 //variables
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800|Raleway:400,500,600,700,800,900&display=swap");
+$iphoneSE: 325px;
 $phone: 400px;
 $smallTablet: 520px;
 $mediumTablet: 700px;
@@ -254,37 +255,6 @@ $transition: all 0.2s ease;
       }
     }
   }
-
-  //carousel
-  .carousel-root {
-    margin: 0 1.2rem;
-    max-width: 418px;
-    p.carousel-status {
-      position: fixed;
-      top: 9%;
-      right: 48%;
-    }
-    .slide {
-      background-color: rgb(58, 58, 58);
-      .legend {
-        bottom: 0;
-        a {
-          color: white;
-          font-weight: bold;
-        }
-      }
-    }
-    .control-dots {
-      position: relative;
-      padding-inline-start: 0px;
-    }
-    .carousel-slider .control-arrow {
-      position: fixed;
-      @media screen and (max-width: $smallScreen) {
-        position: absolute;
-      }
-    }
-  }
 }
 //tabs
 .tabrow {
@@ -385,6 +355,7 @@ $transition: all 0.2s ease;
     margin: 0.8rem 0.5rem;
   }
 }
+//carousel
 .carousel__dot-group {
   text-align: center;
 }
@@ -407,6 +378,11 @@ $transition: all 0.2s ease;
 }
 .btnLeft {
   left: 1%;
+}
+.legend {
+  @media screen and (max-width: $mediumTablet) {
+    font-size: 0.8rem;
+  }
 }
 //modal
 .ReactModalPortal {
@@ -498,11 +474,20 @@ video {
 .designs-container {
   display: flex;
   max-height: 65vh;
+  @media screen and (max-width: 750px) {
+    flex-direction: column;
+  }
   .thumbnail-container {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
     margin-left: 1rem;
+    @media screen and (max-width: 750px) {
+      flex-direction: row;
+      justify-content: space-around;
+      margin-left: 0;
+      height: 80%;
+    }
     .thumbnail {
       width: 80px;
       height: 80px;
@@ -512,6 +497,10 @@ video {
       margin: 5px 1px 3px 0px;
       border: 1px solid rgba(81, 203, 238, 1);
       cursor: pointer;
+      @media screen and (max-width: 750px) {
+        width: 60px;
+        height: 60px;
+      }
     }
     .active {
       box-shadow: 0 0 5px #ed8e9e;
@@ -523,6 +512,11 @@ video {
   .view-container {
     display: flex;
     width: 80%;
+    @media screen and (max-width: 750px) {
+      width: 100%;
+      height: 45vh;
+      margin-top: 0.5rem;
+    }
     .viewBox {
       display: none;
       opacity: 0;
@@ -530,6 +524,7 @@ video {
     img {
       width: 50%;
       max-height: 100%;
+      object-fit: contain;
     }
     .fade {
       animation: fadeIn 2s forwards;
@@ -540,10 +535,25 @@ video {
       flex-direction: column;
       .title {
         font-size: 1.2rem;
+        @media screen and (max-width: $smallTablet) {
+          font-size: 1rem;
+          margin-bottom: 0;
+        }
       }
       .content {
         font-weight: 300;
         font-size: 1rem;
+        @media screen and (max-width: 620px) {
+          font-size: 0.8rem;
+          line-height: 1.1rem;
+        }
+        @media screen and (max-width: $smallTablet) {
+          font-size: 0.7rem;
+        }
+        @media screen and (max-width: $phone) {
+          font-size: 0.6rem;
+          line-height: 0.9rem;
+        }
       }
       .figma-btn {
         background: #ed8e9e;
@@ -567,6 +577,10 @@ video {
 
 //about me section
 .about-container {
+  @media screen and (max-width: $mediumTablet) {
+    flex-direction: column;
+    align-items: center;
+  }
   animation: fadeIn 1s;
   margin: 0 1rem;
   display: flex;
@@ -574,24 +588,43 @@ video {
   .headshot {
     width: 35%;
     margin-top: 10%;
+    @media screen and (max-width: $mediumTablet) {
+      margin-top: 1rem;
+    }
     img {
       border-radius: 50%;
       max-width: 100%;
     }
-    .about-contact {
-      p {
-        font-size: 0.8rem;
-        margin-top: 0.3rem;
-        margin-bottom: 0.1rem;
-        text-align: center;
-      }
-    }
   }
   .about-content {
+    @media screen and (min-width: 1000px) {
+      margin-top: 10%;
+    }
+    @media screen and (max-width: $mediumTablet) {
+      width: 100%;
+    }
+
     width: 55%;
     h2 {
       font-weight: 400;
       margin-top: 0;
+      @media screen and (max-width: $mediumTablet) {
+        font-size: 1.2rem;
+      }
+      @media screen and (max-width: $smallTablet) {
+        font-size: 1rem;
+      }
+    }
+  }
+  p {
+    @media screen and (max-width: $mediumTablet) {
+      font-size: 0.9rem;
+    }
+    @media screen and (max-width: $smallTablet) {
+      font-size: 0.8rem;
+    }
+    @media screen and (max-width: $iphoneSE) {
+      font-size: 0.6rem;
     }
   }
   .intro {
