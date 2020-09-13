@@ -554,6 +554,11 @@ video {
         &:hover {
           background: #e2a1ac;
         }
+        a {
+          color: white;
+          text-decoration: none;
+          font-weight: 600;
+        }
       }
     }
   }
