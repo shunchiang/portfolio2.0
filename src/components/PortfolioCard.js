@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Carousel from "./Carousel";
 import Designs from "./Designs";
+import About from "./About";
 export default function PortfolioCard() {
   const [tabPosition, setTabPosition] = useState(1);
   return (
@@ -52,7 +53,7 @@ export default function PortfolioCard() {
       ) : tabPosition === 2 ? (
         <Designs />
       ) : tabPosition === 3 ? (
-        <></>
+        <About />
       ) : null}
     </div>
   );

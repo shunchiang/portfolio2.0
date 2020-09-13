@@ -74,6 +74,7 @@ $transition: all 0.2s ease;
       align-items: center;
       height: 100%;
       background: #3a3a3a;
+      animation: fadeIn 1s;
       h1 {
         text-align: center;
         font-weight: 400;
@@ -563,6 +564,48 @@ video {
     }
   }
 }
+
+//about me section
+.about-container {
+  animation: fadeIn 1s;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: space-around;
+  .headshot {
+    width: 35%;
+    margin-top: 10%;
+    img {
+      border-radius: 50%;
+      max-width: 100%;
+    }
+    .about-contact {
+      p {
+        font-size: 0.8rem;
+        margin-top: 0.3rem;
+        margin-bottom: 0.1rem;
+        text-align: center;
+      }
+    }
+  }
+  .about-content {
+    width: 55%;
+    h2 {
+      font-weight: 400;
+      margin-top: 0;
+    }
+  }
+  .intro {
+    margin-bottom: 0.5rem;
+  }
+  .intro,
+  .and {
+    color: #e2a1ac;
+  }
+  .about-body {
+    line-height: 1.5rem;
+  }
+}
+//about end
 @keyframes fadeIn {
   0% {
     opacity: 0;
