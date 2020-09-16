@@ -46,7 +46,7 @@ export default function ({ openModal }) {
       </a>
 
       <a
-        href="https://github.com/kkslider2130"
+        href="https://github.com/shunchiang"
         target="_blank"
         rel="noopener noreferrer"
       >

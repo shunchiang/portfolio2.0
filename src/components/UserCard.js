@@ -20,7 +20,6 @@ const customStyles = {
 };
 
 export default function Usercard() {
-  //modal example
   let subtitle;
 
   const history = useHistory();
