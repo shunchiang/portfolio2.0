@@ -150,7 +150,7 @@ export default function Carousel() {
                   <a
                     rel="noopener noreferrer"
                     target="_blank"
-                    href="https://shun-chiang-game-of-life.vercel.app/"
+                    href="https://react-redux-app-dh4sstkbd.now.sh/"
                   >
                     MTG booster sim
                   </a>
