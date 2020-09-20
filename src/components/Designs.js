@@ -31,7 +31,7 @@ export default function Designs() {
       </div>
       <div className="view-container">
         <div
-          className={currentThumb !== fitnessApp ? "viewBox" : `viewBox fade`}
+          className={currentThumb !== fitnessApp ? "viewBox" : "viewBox fade"}
         >
           <Loader
             type="Puff"
@@ -73,7 +73,9 @@ export default function Designs() {
           </div>
         </div>
         <div className={currentThumb !== queueApp ? "viewBox" : `viewBox fade`}>
-          <img src={currentThumb} alt="application" />
+          <div className="application-picture">
+            <img src={currentThumb} alt="application" />
+          </div>
           <div className="design-description">
             <p className="title">The Queue</p>
             <p className="content">
@@ -100,7 +102,9 @@ export default function Designs() {
             currentThumb !== sleepTrackerApp ? "viewBox" : `viewBox fade`
           }
         >
-          <img src={currentThumb} alt="application" />
+          <div className="application-picture">
+            <img src={currentThumb} alt="application" />
+          </div>
           <div className="design-description">
             <p className="title">Sleep Tracker</p>
             <p className="content">
@@ -123,7 +127,9 @@ export default function Designs() {
           </div>
         </div>
         <div className={currentThumb !== rrandall ? "viewBox" : `viewBox fade`}>
-          <img src={currentThumb} alt="application" />
+          <div className="application-picture">
+            <img src={currentThumb} alt="application" />
+          </div>
           <div className="design-description">
             <p className="title">R.Randall Contractors</p>
             <p className="content">
