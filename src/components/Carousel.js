@@ -114,7 +114,7 @@ export default function Carousel() {
           <div>
             <Image>
               <video
-                autoPlay={size > 500 ? "autoplay" : null}
+                autoPlay={size.width > 500 ? "autoplay" : null}
                 loop="loop"
                 muted
                 poster={ftcPic}
