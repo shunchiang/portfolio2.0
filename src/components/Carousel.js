@@ -10,16 +10,20 @@ import {
 import "pure-react-carousel/dist/react-carousel.es.css";
 
 import ftc from "../img/ftc.mp4";
+import ftcPic from "../img/ftc.png";
 import mtg from "../img/mtgVid.mp4";
+import mtgPic from "../img/mtg.png";
 import gigapet from "../img/gigapet.png";
 import foodtruck from "../img/foodtruck.mp4";
+import foodtruckPic from "../img/foodtruck.png";
 import conways from "../img/Conways.mp4";
+import conwaysPic from "../img/conwaysPic.png";
 import potd from "../img/nasa.png";
 import blog from "../img/blog.png";
 import portfo from "../img/portfo.png";
 import rm from "../img/rm.png";
 import mm from "../img/mm.mp4";
-
+import mmPic from "../img/mmPic.png";
 export default function Carousel() {
   const size = useWindowSize();
   return (
@@ -43,7 +47,7 @@ export default function Carousel() {
       <Slider>
         <Slide index={0}>
           <div>
-            <video autoPlay="autoplay" loop="loop" muted>
+            <video autoPlay="autoplay" loop="loop" muted poster={mmPic}>
               <source type="video/mp4" src={mm} />
             </video>
             <div className="infoCon">
@@ -68,7 +72,7 @@ export default function Carousel() {
         </Slide>
         <Slide index={1}>
           <div>
-            <video autoPlay="autoplay" loop="loop" muted>
+            <video autoPlay="autoplay" loop="loop" muted poster={foodtruckPic}>
               <source type="video/mp4" src={foodtruck} />
             </video>
             <div className="infoCon">
@@ -92,7 +96,7 @@ export default function Carousel() {
         </Slide>
         <Slide index={2}>
           <div>
-            <video autoPlay="autoplay" loop="loop" muted>
+            <video autoPlay="autoplay" loop="loop" muted poster={ftcPic}>
               <source type="video/mp4" src={ftc} />
             </video>{" "}
             <div className="infoCon">
@@ -116,7 +120,7 @@ export default function Carousel() {
         </Slide>
         <Slide index={3}>
           <div>
-            <video autoPlay="autoplay" loop="loop" muted>
+            <video autoPlay="autoplay" loop="loop" muted poster={conwaysPic}>
               <source type="video/mp4" src={conways} />
             </video>{" "}
             <div className="infoCon">
@@ -141,7 +145,7 @@ export default function Carousel() {
 
         <Slide index={4}>
           <div>
-            <video autoPlay="autoplay" loop="loop" muted>
+            <video autoPlay="autoplay" loop="loop" muted poster={mtgPic}>
               <source type="video/mp4" src={mtg} />
             </video>{" "}
             <div className="infoCon">
