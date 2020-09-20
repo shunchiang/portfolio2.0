@@ -6,6 +6,7 @@ import {
   DotGroup,
   ButtonBack,
   ButtonNext,
+  Image,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
@@ -43,13 +44,21 @@ export default function Carousel() {
           : 46
       }
       totalSlides={10}
+      hasMasterSpinner={true}
     >
       <Slider>
         <Slide index={0}>
           <div>
-            <video autoPlay="autoplay" loop="loop" muted poster={mmPic}>
-              <source type="video/mp4" src={mm} />
-            </video>
+            <Image>
+              <video
+                autoPlay={size.width > 500 ? "autoplay" : null}
+                loop="loop"
+                muted
+                poster={mmPic}
+              >
+                <source type="video/mp4" src={mm} />
+              </video>
+            </Image>
             <div className="infoCon">
               <p className="legend">
                 <div className="titleBox">
@@ -72,9 +81,16 @@ export default function Carousel() {
         </Slide>
         <Slide index={1}>
           <div>
-            <video autoPlay="autoplay" loop="loop" muted poster={foodtruckPic}>
-              <source type="video/mp4" src={foodtruck} />
-            </video>
+            <Image>
+              <video
+                autoPlay={size.width > 500 ? "autoplay" : null}
+                loop="loop"
+                muted
+                poster={foodtruckPic}
+              >
+                <source type="video/mp4" src={foodtruck} />
+              </video>
+            </Image>
             <div className="infoCon">
               <p className="legend">
                 <div className="titleBox">
@@ -96,9 +112,16 @@ export default function Carousel() {
         </Slide>
         <Slide index={2}>
           <div>
-            <video autoPlay="autoplay" loop="loop" muted poster={ftcPic}>
-              <source type="video/mp4" src={ftc} />
-            </video>{" "}
+            <Image>
+              <video
+                autoPlay={size > 500 ? "autoplay" : null}
+                loop="loop"
+                muted
+                poster={ftcPic}
+              >
+                <source type="video/mp4" src={ftc} />
+              </video>{" "}
+            </Image>
             <div className="infoCon">
               <p className="legend">
                 <div className="titleBox">
@@ -120,9 +143,16 @@ export default function Carousel() {
         </Slide>
         <Slide index={3}>
           <div>
-            <video autoPlay="autoplay" loop="loop" muted poster={conwaysPic}>
-              <source type="video/mp4" src={conways} />
-            </video>{" "}
+            <Image>
+              <video
+                autoPlay={size.width > 500 ? "autoplay" : null}
+                loop="loop"
+                muted
+                poster={conwaysPic}
+              >
+                <source type="video/mp4" src={conways} />
+              </video>{" "}
+            </Image>
             <div className="infoCon">
               <p className="legend">
                 <div className="titleBox">
@@ -145,9 +175,16 @@ export default function Carousel() {
 
         <Slide index={4}>
           <div>
-            <video autoPlay="autoplay" loop="loop" muted poster={mtgPic}>
-              <source type="video/mp4" src={mtg} />
-            </video>{" "}
+            <Image>
+              <video
+                autoPlay={size.width > 500 ? "autoplay" : null}
+                loop="loop"
+                muted
+                poster={mtgPic}
+              >
+                <source type="video/mp4" src={mtg} />
+              </video>{" "}
+            </Image>
             <div className="infoCon">
               <p className="legend">
                 <div className="titleBox">
@@ -169,7 +206,9 @@ export default function Carousel() {
         </Slide>
         <Slide index={5}>
           <div>
-            <img alt="gigapet" src={gigapet} />{" "}
+            <Image>
+              <img alt="gigapet" src={gigapet} />{" "}
+            </Image>
             <div className="infoCon">
               <p className="legend">
                 <div className="titleBox">
@@ -191,7 +230,9 @@ export default function Carousel() {
         </Slide>
         <Slide index={6}>
           <div>
-            <img alt="nasa app" src={potd} />
+            <Image>
+              <img alt="nasa app" src={potd} />
+            </Image>
             {""}
             <div className="infoCon">
               <p className="legend">
@@ -213,7 +254,9 @@ export default function Carousel() {
         </Slide>
         <Slide index={7}>
           <div>
-            <img alt="Blog" src={blog} />
+            <Image>
+              <img alt="Blog" src={blog} />
+            </Image>
             {""}
             <div className="infoCon">
               <p className="legend">
@@ -235,7 +278,9 @@ export default function Carousel() {
         </Slide>
         <Slide index={8}>
           <div>
-            <img alt="Blog" src={rm} />
+            <Image>
+              <img alt="Blog" src={rm} />
+            </Image>
             {""}
             <div className="infoCon">
               <p className="legend">
@@ -257,7 +302,9 @@ export default function Carousel() {
         </Slide>
         <Slide index={9}>
           <div>
-            <img alt="Blog" src={portfo} />
+            <Image>
+              <img alt="Blog" src={portfo} />
+            </Image>
             {""}
             <div className="infoCon">
               <p className="legend">
