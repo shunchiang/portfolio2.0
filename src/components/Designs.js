@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
+
 // import fitnessThumb from "../img/fitnessThumb.png"
 // import queueThumb from "../img/queuethumb.png"
 import sleepTrackerApp from "../img/sleepTrackerApp.png";
@@ -9,6 +12,7 @@ import rrandall from "../img/rrandall.png";
 export default function Designs() {
   const thumbnailArray = [fitnessApp, queueApp, sleepTrackerApp, rrandall];
   const [currentThumb, setCurrentThumb] = useState(fitnessApp);
+  const [loaded, setLoaded] = useState(false);
   return (
     <div className="designs-container">
       <div className="thumbnail-container">
@@ -29,7 +33,22 @@ export default function Designs() {
         <div
           className={currentThumb !== fitnessApp ? "viewBox" : `viewBox fade`}
         >
-          <img src={currentThumb} alt="application" />
+          <Loader
+            type="Puff"
+            color="white"
+            height={100}
+            width={100}
+            className="loader"
+            visible={setLoaded ? false : true}
+          />
+
+          <img
+            src={currentThumb}
+            alt="application"
+            onLoad={() => {
+              setLoaded(true);
+            }}
+          />
 
           <div className="design-description">
             <p className="title">Anywhere Fitness</p>

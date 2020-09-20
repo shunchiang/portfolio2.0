@@ -517,6 +517,11 @@ video {
       height: 45vh;
       margin-top: 0.5rem;
     }
+    .loader {
+      position: absolute;
+      top: 30%;
+      left: 25%;
+    }
     .viewBox {
       display: none;
       opacity: 0;
