@@ -10,21 +10,21 @@ import {
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
-import ftc from "../img/ftc.mp4";
-import ftcPic from "../img/ftc.png";
-import mtg from "../img/mtgVid.mp4";
-import mtgPic from "../img/mtg.png";
-import gigapet from "../img/gigapet.png";
-import foodtruck from "../img/foodtruck.mp4";
-import foodtruckPic from "../img/foodtruck.png";
+import ftc from "../img/ftc-min.mp4";
+import ftcPic from "../img/ftc-min.png";
+import mtg from "../img/mtgVid-min.mp4";
+import mtgPic from "../img/mtg-min.png";
+import gigapet from "../img/gigapet-min.png";
+import foodtruck from "../img/foodtruck-min.mp4";
+import foodtruckPic from "../img/foodtruck-min.png";
 import conways from "../img/Conways.mp4";
-import conwaysPic from "../img/conwaysPic.png";
-import potd from "../img/nasa.png";
-import blog from "../img/blog.png";
-import portfo from "../img/portfo.png";
-import rm from "../img/rm.png";
-import mm from "../img/mm.mp4";
-import mmPic from "../img/mmPic.png";
+import conwaysPic from "../img/conwaysPic-min.png";
+import potd from "../img/nasa-min.png";
+import blog from "../img/blog-min.png";
+import portfo from "../img/portfo-min.png";
+import rm from "../img/rm-min.png";
+import mm from "../img/mm-min.mp4";
+import mmPic from "../img/mmPic-min.png";
 export default function Carousel() {
   const size = useWindowSize();
   return (

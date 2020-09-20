@@ -4,10 +4,10 @@ import Loader from "react-loader-spinner";
 
 // import fitnessThumb from "../img/fitnessThumb.png"
 // import queueThumb from "../img/queuethumb.png"
-import sleepTrackerApp from "../img/sleepTrackerApp.png";
-import fitnessApp from "../img/fitnessApp.png";
-import queueApp from "../img/QueueApp.png";
-import rrandall from "../img/rrandall.png";
+import sleepTrackerApp from "../img/sleepTrackerApp-min.png";
+import fitnessApp from "../img/fitnessApp-min.png";
+import queueApp from "../img/QueueApp-min.png";
+import rrandall from "../img/rrandall-min.png";
 
 export default function Designs() {
   const thumbnailArray = [fitnessApp, queueApp, sleepTrackerApp, rrandall];
