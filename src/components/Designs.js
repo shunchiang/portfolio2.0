@@ -39,7 +39,7 @@ export default function Designs() {
             height={100}
             width={100}
             className="loader"
-            visible={setLoaded ? false : true}
+            visible={loaded ? false : true}
           />
 
           <img
@@ -47,6 +47,7 @@ export default function Designs() {
             alt="application"
             onLoad={() => {
               setLoaded(true);
+              console.log(loaded);
             }}
           />
 

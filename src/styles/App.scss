@@ -521,6 +521,13 @@ video {
       position: absolute;
       top: 30%;
       left: 25%;
+      @media screen and (max-width: 1000px) {
+        left: 30%;
+      }
+      @media screen and (max-width: 750px) {
+        left: 9%;
+        top: 50%;
+      }
     }
     .viewBox {
       display: none;
