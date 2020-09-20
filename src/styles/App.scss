@@ -520,24 +520,44 @@ video {
     .loader {
       position: absolute;
       top: 30%;
-      left: 25%;
+      left: 28%;
       @media screen and (max-width: 1000px) {
-        left: 30%;
+        left: 31%;
       }
       @media screen and (max-width: 750px) {
-        left: 9%;
+        left: 14%;
         top: 50%;
+      }
+      @media screen and (max-width: 500px) {
+        left: 10%;
+      }
+      @media screen and (max-width: 400px) {
+        left: 5%;
+      }
+      @media screen and (max-width: 350px) {
+        left: 2%;
       }
     }
     .viewBox {
       display: none;
       opacity: 0;
     }
-    img {
+    .application-picture {
       width: 50%;
+      align-self: center;
+      text-align: center;
       max-height: 100%;
-      object-fit: contain;
+
+      img {
+        width: 88%;
+        max-height: 100%;
+        object-fit: contain;
+        @media screen and (max-width: 750px) {
+          width: 80%;
+        }
+      }
     }
+
     .fade {
       animation: fadeIn 2s forwards;
       display: flex;
@@ -545,9 +565,13 @@ video {
     .design-description {
       display: flex;
       flex-direction: column;
+      width: 50%;
+      @media screen and (max-width: 750px) {
+        padding-right: 2rem;
+      }
       .title {
         font-size: 1.2rem;
-        @media screen and (max-width: $smallTablet) {
+        @media screen and (max-width: 750px) {
           font-size: 1rem;
           margin-bottom: 0;
         }
@@ -555,7 +579,7 @@ video {
       .content {
         font-weight: 300;
         font-size: 1rem;
-        @media screen and (max-width: 620px) {
+        @media screen and (max-width: 750px) {
           font-size: 0.8rem;
           line-height: 1.1rem;
         }

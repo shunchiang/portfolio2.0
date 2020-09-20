@@ -41,15 +41,16 @@ export default function Designs() {
             className="loader"
             visible={loaded ? false : true}
           />
-
-          <img
-            src={currentThumb}
-            alt="application"
-            onLoad={() => {
-              setLoaded(true);
-              console.log(loaded);
-            }}
-          />
+          <div className="application-picture">
+            <img
+              src={currentThumb}
+              alt="application"
+              onLoad={() => {
+                setLoaded(true);
+                console.log(loaded);
+              }}
+            />
+          </div>
 
           <div className="design-description">
             <p className="title">Anywhere Fitness</p>
