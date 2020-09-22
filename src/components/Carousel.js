@@ -74,7 +74,8 @@ export default function Carousel() {
                 Map app built for the Miracle Messages organization, an SF based
                 non-profit with a mission of reuniting the homeless. A platform
                 for data visualization displaying reunions of homeless people
-                and their loved ones.
+                and their loved ones. To be featured In the Clinton foundation
+                homepage.
               </p>
             </div>
           </div>
